@@ -1,0 +1,115 @@
+:root {
+  --primary: #111;
+  --secondary: white;
+  --temp: #333;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body {
+  background-color: var(--primary);
+  color: var(--secondary);
+  margin: 0 0 1rem 0;
+}
+/* .nav-header {
+  margin: 1rem 1rem 1rem 4rem;
+  font-size: 1rem;
+  font-weight: 600;
+} */
+.banner {
+  height: 25rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("./images/Netflix\ Movie\ Series\ Download\ Template\ -\ Made\ with\ PosterMyWall.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 0 0 0 40px;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  z-index: 10;
+}
+.btnPlay,
+.btnMylist {
+  padding: 0.8rem 1.2rem;
+  border-radius: 2px;
+  border: none;
+  margin: 1rem 0.5rem 1rem 0;
+  font-size: 1rem;
+  font-weight: 300;
+  z-index: 10;
+}
+.btnPlay {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+.btnMylist {
+  background-color: rgb(128, 128, 128, 0.7);
+  color: var(--secondary);
+}
+
+.description {
+  font-size: 1.2rem;
+  z-index: 10;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  height: 13rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(27, 27, 27, 0.61),
+    #111
+  );
+}
+.btnPlay:hover,
+.btnMylist:hover {
+  cursor: pointer;
+}
+.originals{
+    margin: 0 0 2rem 2rem;
+
+}
+.movies{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 2rem;
+}
+.movies_header{
+margin: 2rem 0 0 0;
+}
+.original_movies, .movies_container{
+    margin: 0 0 0 2rem;
+    display: flex;
+    overflow-x: scroll;
+    overflow: hidden;
+}
+.original_movies::-webkit-scrollbar{
+    display: none;
+}
+.original_movies img{
+    height: 15.625rem;
+    width: auto;
+    margin: 0 10px 0 0;
+}
+.movies_container img{
+    width: 200px;
+    margin: 0 10px 0 0;
+}
+.original_movies img,.movies_container img{
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+.original_movies img:hover,.movies_container img:hover{
+    transform: scale(1.1);
+}
