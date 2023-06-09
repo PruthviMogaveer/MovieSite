@@ -1,62 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./images/favicon.png" >
     <title>Movies</title>
-</head>
+  </head>
 
-<body>
-    <header class="nav-header">
-    </header>
+  <body>
+    <header class="nav-header"></header>
     <main>
-        <div class="banner">
-            <div class="title">
-                <h2>Title</h2>
-            </div>
-            <div class="control-buttons">
-                <button class="btnPlay"><i class="fa-solid fa-play"></i> Play</button>
-                <button class="btnMylist">My List</button>
-            </div>
-            <div class="description">Lorem ipsum dolor sit amet consectetur
-                adipisicing elit.
-            </div>
+      <div class="banner">
+        <div class="title">
+          <h2>
+            Watch your favoraite movies here
+            <i class="fa-solid fa-circle-down"></i>
+          </h2>
         </div>
+      </div>
+      <div class="container">
         <div class="originals">
-            <div class="original_header">
-                <h1>ORIGINALS</h1>
-            </div>
-            <!-- Original movie list -->
-            <div class="original_movies">
-
-            </div>
+          <div class="original_header">
+            <h1>ORIGINALS</h1>
+          </div>
+          <!-- Original movie list -->
+          <div class="original_movies"></div>
         </div>
         <div class="movies">
-            <div class="movies_header">
-                <h2>Wishlist</h2>
-            </div>
-            <div class="movies_container" id="wishlist">
+          <div class="movies_header">
+            <h2>Wishlist</h2>
+          </div>
 
-            </div>
-            <div class="movies_header">
-                <h2>Trending</h2>
-            </div>
-            <div class="movies_container" id="trending">
-
-            </div>
-            <div class="movies_header">
-                <h2>Top Rated</h2>
-            </div>
-            <div class="movies_container" id="top_rated">
-                
-            </div>
+          <div class="movies_header">
+            <h2>Trending</h2>
+          </div>
+          <div class="movies_container" id="trending"></div>
+          <div class="movies_header">
+            <h2>Top Rated</h2>
+          </div>
+          <div class="movies_container" id="top_rated"></div>
         </div>
+      </div>
     </main>
-    <script src="https://kit.fontawesome.com/36ab4d1562.js" crossorigin="anonymous"></script>
+    <div
+      class="modal fade"
+      id="trailerModal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <span class="movieNotFound">Trailer Not Found</span>
+            <iframe
+              id="movieTrailer"
+              height="400"
+              src=""
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/36ab4d1562.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
